@@ -1,0 +1,119 @@
+digraph G {
+node [shape=box];
+"torso_link" [label="torso_link"];
+"l_hip_ie_link" [label="l_hip_ie_link"];
+"l_hip_aa_link" [label="l_hip_aa_link"];
+"l_hip_fe_link" [label="l_hip_fe_link"];
+"l_knee_fe_lp" [label="l_knee_fe_lp"];
+"l_knee_adj_link" [label="l_knee_adj_link"];
+"l_knee_fe_ld" [label="l_knee_fe_ld"];
+"l_ankle_fe_link" [label="l_ankle_fe_link"];
+"l_ankle_ie_link" [label="l_ankle_ie_link"];
+"l_foot_contact" [label="l_foot_contact"];
+"l_shoulder_fe_link" [label="l_shoulder_fe_link"];
+"l_shoulder_aa_link" [label="l_shoulder_aa_link"];
+"l_shoulder_ie_link" [label="l_shoulder_ie_link"];
+"l_elbow_fe_link" [label="l_elbow_fe_link"];
+"l_wrist_ps_link" [label="l_wrist_ps_link"];
+"l_wrist_pitch_link" [label="l_wrist_pitch_link"];
+"l_sake_gripper_link" [label="l_sake_gripper_link"];
+"l_camera" [label="l_camera"];
+"l_hand_contact" [label="l_hand_contact"];
+"neck_pitch_link" [label="neck_pitch_link"];
+"r_hip_ie_link" [label="r_hip_ie_link"];
+"r_hip_aa_link" [label="r_hip_aa_link"];
+"r_hip_fe_link" [label="r_hip_fe_link"];
+"r_knee_fe_lp" [label="r_knee_fe_lp"];
+"r_knee_adj_link" [label="r_knee_adj_link"];
+"r_knee_fe_ld" [label="r_knee_fe_ld"];
+"r_ankle_fe_link" [label="r_ankle_fe_link"];
+"r_ankle_ie_link" [label="r_ankle_ie_link"];
+"r_foot_contact" [label="r_foot_contact"];
+"r_shoulder_fe_link" [label="r_shoulder_fe_link"];
+"r_shoulder_aa_link" [label="r_shoulder_aa_link"];
+"r_shoulder_ie_link" [label="r_shoulder_ie_link"];
+"r_elbow_fe_link" [label="r_elbow_fe_link"];
+"r_wrist_ps_link" [label="r_wrist_ps_link"];
+"r_wrist_pitch_link" [label="r_wrist_pitch_link"];
+"r_sake_gripper_link" [label="r_sake_gripper_link"];
+"r_camera" [label="r_camera"];
+"r_hand_contact" [label="r_hand_contact"];
+"torso_com_link" [label="torso_com_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"torso_link" -> "l_hip_ie" [label="xyz: 0 0.06 -0.0893782 \nrpy: 0.523599 -0 0"]
+"l_hip_ie" -> "l_hip_ie_link"
+"l_hip_ie_link" -> "l_hip_aa" [label="xyz: 0 0 -0.07 \nrpy: -0.523599 0 0"]
+"l_hip_aa" -> "l_hip_aa_link"
+"l_hip_aa_link" -> "l_hip_fe" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"l_hip_fe" -> "l_hip_fe_link"
+"l_hip_fe_link" -> "l_knee_fe_jp" [label="xyz: 0 0 -0.324231 \nrpy: 0 -0 0"]
+"l_knee_fe_jp" -> "l_knee_fe_lp"
+"l_knee_fe_lp" -> "l_knee_adj" [label="xyz: 0 0 -0.0557693 \nrpy: 0 -0 0"]
+"l_knee_adj" -> "l_knee_adj_link"
+"l_knee_fe_lp" -> "l_knee_fe_jd" [label="xyz: 0 0 -0.111539 \nrpy: 0 -0 0"]
+"l_knee_fe_jd" -> "l_knee_fe_ld"
+"l_knee_fe_ld" -> "l_ankle_fe" [label="xyz: 0 0.00599 -0.248231 \nrpy: 0 -0 0"]
+"l_ankle_fe" -> "l_ankle_fe_link"
+"l_ankle_fe_link" -> "l_ankle_ie" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"l_ankle_ie" -> "l_ankle_ie_link"
+"l_ankle_ie_link" -> "l_foot_contact_frame" [label="xyz: 0 0 -0.076 \nrpy: 0 -0 0"]
+"l_foot_contact_frame" -> "l_foot_contact"
+"torso_link" -> "l_shoulder_fe" [label="xyz: -0.05 0.156 0.2625 \nrpy: 0.523599 -0 0"]
+"l_shoulder_fe" -> "l_shoulder_fe_link"
+"l_shoulder_fe_link" -> "l_shoulder_aa" [label="xyz: 0 0 0 \nrpy: -0.523599 0 0"]
+"l_shoulder_aa" -> "l_shoulder_aa_link"
+"l_shoulder_aa_link" -> "l_shoulder_ie" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"l_shoulder_ie" -> "l_shoulder_ie_link"
+"l_shoulder_ie_link" -> "l_elbow_fe" [label="xyz: 0 0 -0.25 \nrpy: 0 -0 0"]
+"l_elbow_fe" -> "l_elbow_fe_link"
+"l_elbow_fe_link" -> "l_wrist_ps" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"l_wrist_ps" -> "l_wrist_ps_link"
+"l_wrist_ps_link" -> "l_wrist_pitch" [label="xyz: 0 0 -0.1578 \nrpy: 0 -0 0"]
+"l_wrist_pitch" -> "l_wrist_pitch_link"
+"l_wrist_pitch_link" -> "l_wrist_mount" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"l_wrist_mount" -> "l_sake_gripper_link"
+"l_sake_gripper_link" -> "l_camera_frame" [label="xyz: -0.05535 0 -0.073 \nrpy: 3.14159 0.00159265 3.14159"]
+"l_camera_frame" -> "l_camera"
+"l_sake_gripper_link" -> "l_hand_contact_frame" [label="xyz: 0 0 -0.2 \nrpy: 0 -0 0"]
+"l_hand_contact_frame" -> "l_hand_contact"
+"torso_link" -> "neck_pitch" [label="xyz: -0.0025 0 0.352 \nrpy: 0 -0 0"]
+"neck_pitch" -> "neck_pitch_link"
+"torso_link" -> "r_hip_ie" [label="xyz: 0 -0.06 -0.0893782 \nrpy: -0.523599 0 0"]
+"r_hip_ie" -> "r_hip_ie_link"
+"r_hip_ie_link" -> "r_hip_aa" [label="xyz: 0 0 -0.07 \nrpy: 0.523599 -0 0"]
+"r_hip_aa" -> "r_hip_aa_link"
+"r_hip_aa_link" -> "r_hip_fe" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"r_hip_fe" -> "r_hip_fe_link"
+"r_hip_fe_link" -> "r_knee_fe_jp" [label="xyz: 0 0 -0.324231 \nrpy: 0 -0 0"]
+"r_knee_fe_jp" -> "r_knee_fe_lp"
+"r_knee_fe_lp" -> "r_knee_adj" [label="xyz: 0 0 -0.0557693 \nrpy: 0 -0 0"]
+"r_knee_adj" -> "r_knee_adj_link"
+"r_knee_fe_lp" -> "r_knee_fe_jd" [label="xyz: 0 0 -0.111539 \nrpy: 0 -0 0"]
+"r_knee_fe_jd" -> "r_knee_fe_ld"
+"r_knee_fe_ld" -> "r_ankle_fe" [label="xyz: 0 -0.006 -0.248231 \nrpy: 0 -0 0"]
+"r_ankle_fe" -> "r_ankle_fe_link"
+"r_ankle_fe_link" -> "r_ankle_ie" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"r_ankle_ie" -> "r_ankle_ie_link"
+"r_ankle_ie_link" -> "r_foot_contact_frame" [label="xyz: 0 0 -0.076 \nrpy: 0 -0 0"]
+"r_foot_contact_frame" -> "r_foot_contact"
+"torso_link" -> "r_shoulder_fe" [label="xyz: -0.05 -0.156 0.2625 \nrpy: -0.523599 0 0"]
+"r_shoulder_fe" -> "r_shoulder_fe_link"
+"r_shoulder_fe_link" -> "r_shoulder_aa" [label="xyz: 0 0 0 \nrpy: 0.523599 -0 0"]
+"r_shoulder_aa" -> "r_shoulder_aa_link"
+"r_shoulder_aa_link" -> "r_shoulder_ie" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"r_shoulder_ie" -> "r_shoulder_ie_link"
+"r_shoulder_ie_link" -> "r_elbow_fe" [label="xyz: 0 0 -0.25 \nrpy: 0 -0 0"]
+"r_elbow_fe" -> "r_elbow_fe_link"
+"r_elbow_fe_link" -> "r_wrist_ps" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"r_wrist_ps" -> "r_wrist_ps_link"
+"r_wrist_ps_link" -> "r_wrist_pitch" [label="xyz: 0 0 -0.1578 \nrpy: 0 -0 0"]
+"r_wrist_pitch" -> "r_wrist_pitch_link"
+"r_wrist_pitch_link" -> "r_wrist_mount" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"r_wrist_mount" -> "r_sake_gripper_link"
+"r_sake_gripper_link" -> "r_camera_frame" [label="xyz: -0.05535 0 -0.073 \nrpy: 3.14159 0.00159265 3.14159"]
+"r_camera_frame" -> "r_camera"
+"r_sake_gripper_link" -> "r_hand_contact_frame" [label="xyz: 0 0 -0.2 \nrpy: 0 -0 0"]
+"r_hand_contact_frame" -> "r_hand_contact"
+"torso_link" -> "torso_com" [label="xyz: -0.0310745 -0.000497416 0.137484 \nrpy: 0 -0 0"]
+"torso_com" -> "torso_com_link"
+}

@@ -1,0 +1,50 @@
+digraph G {
+node [shape=box];
+"pelvis" [label="pelvis"];
+"left_pelvis_abduction" [label="left_pelvis_abduction"];
+"left_pelvis_rotation" [label="left_pelvis_rotation"];
+"left_hip" [label="left_hip"];
+"left_thigh" [label="left_thigh"];
+"left_shin" [label="left_shin"];
+"left_tarsus" [label="left_tarsus"];
+"left_toe" [label="left_toe"];
+"base" [label="base"];
+"right_pelvis_abduction" [label="right_pelvis_abduction"];
+"right_pelvis_rotation" [label="right_pelvis_rotation"];
+"right_hip" [label="right_hip"];
+"right_thigh" [label="right_thigh"];
+"right_shin" [label="right_shin"];
+"right_tarsus" [label="right_tarsus"];
+"right_toe" [label="right_toe"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"pelvis" -> "fixed_left" [label="xyz: 0.021 0.135 0 \nrpy: 0 1.5708 -0"]
+"fixed_left" -> "left_pelvis_abduction"
+"left_pelvis_abduction" -> "hip_abduction_left" [label="xyz: 0 0 -0.07 \nrpy: 0 -1.5708 0"]
+"hip_abduction_left" -> "left_pelvis_rotation"
+"left_pelvis_rotation" -> "hip_rotation_left" [label="xyz: 0 0 -0.09 \nrpy: 0 1.5708 -1.5708"]
+"hip_rotation_left" -> "left_hip"
+"left_hip" -> "hip_flexion_left" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"hip_flexion_left" -> "left_thigh"
+"left_thigh" -> "thigh_joint_left" [label="xyz: 0.12 0 0.0045 \nrpy: 0 -0 0"]
+"thigh_joint_left" -> "left_shin"
+"left_shin" -> "ankle_joint_left" [label="xyz: 0.4348 0.02 0 \nrpy: 0 -0 0"]
+"ankle_joint_left" -> "left_tarsus"
+"left_tarsus" -> "toe_joint_left" [label="xyz: 0.408 -0.04 0 \nrpy: 0 -0 0"]
+"toe_joint_left" -> "left_toe"
+"pelvis" -> "fixed_pelvis_to_base" [label="xyz: 0.03155 0 -0.07996 \nrpy: 0 -0 0"]
+"fixed_pelvis_to_base" -> "base"
+"pelvis" -> "fixed_right" [label="xyz: 0.021 -0.135 0 \nrpy: 0 1.5708 -0"]
+"fixed_right" -> "right_pelvis_abduction"
+"right_pelvis_abduction" -> "hip_abduction_right" [label="xyz: 0 0 -0.07 \nrpy: 0 -1.5708 0"]
+"hip_abduction_right" -> "right_pelvis_rotation"
+"right_pelvis_rotation" -> "hip_rotation_right" [label="xyz: 0 0 -0.09 \nrpy: 0 1.5708 -1.5708"]
+"hip_rotation_right" -> "right_hip"
+"right_hip" -> "hip_flexion_right" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"hip_flexion_right" -> "right_thigh"
+"right_thigh" -> "thigh_joint_right" [label="xyz: 0.12 0 -0.0045 \nrpy: 0 -0 0"]
+"thigh_joint_right" -> "right_shin"
+"right_shin" -> "ankle_joint_right" [label="xyz: 0.4348 0.02 0 \nrpy: 0 -0 0"]
+"ankle_joint_right" -> "right_tarsus"
+"right_tarsus" -> "toe_joint_right" [label="xyz: 0.408 -0.04 0 \nrpy: 0 -0 0"]
+"toe_joint_right" -> "right_toe"
+}

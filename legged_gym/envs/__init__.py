@@ -38,7 +38,10 @@ from .anymal_b.anymal_b_config import AnymalBRoughCfg, AnymalBRoughCfgPPO
 from .cassie.cassie import Cassie
 from .cassie.cassie_config import CassieRoughCfg, CassieRoughCfgPPO
 from .a1.a1_config import A1RoughCfg, A1RoughCfgPPO
-
+from .draco3.draco3 import Draco3
+from .draco3.draco3_config import Draco3Cfg, Draco3CfgPPO
+from .atlas.atlas import Atlas
+from .atlas.atlas_config import AtlasCfg, AtlasCfgPPO
 
 import os
 
@@ -49,3 +52,7 @@ task_registry.register( "anymal_c_flat", Anymal, AnymalCFlatCfg(), AnymalCFlatCf
 task_registry.register( "anymal_b", Anymal, AnymalBRoughCfg(), AnymalBRoughCfgPPO() )
 task_registry.register( "a1", LeggedRobot, A1RoughCfg(), A1RoughCfgPPO() )
 task_registry.register( "cassie", Cassie, CassieRoughCfg(), CassieRoughCfgPPO() )
+task_registry.register( "draco3", Draco3, Draco3Cfg(), Draco3CfgPPO() )
+task_registry.register( "atlas", Atlas, AtlasCfg(), AtlasCfgPPO() )
+
+
