@@ -49,9 +49,9 @@ class Atlas(LeggedRobot):
     def _reward_COM_above_knee(self):
         base_pos = (self.root_states[i, :3]).cpu().numpy()
         # knee is called l_lleg and r_lleg
-        return torch.square(self.base_pos[2] - )
+        # return torch.square(self.base_pos[2] - )
 
-
+    # Draws yellow spheres at COM 
     def _draw_debug_vis(self):
         sphere_geom = gymutil.WireframeSphereGeometry(0.02, 4, 4, None, color=(1, 1, 0))
 
@@ -60,3 +60,6 @@ class Atlas(LeggedRobot):
             sphere_pose = gymapi.Transform(gymapi.Vec3(base_pos[0], base_pos[1], base_pos[2]), r=None)
             gymutil.draw_lines(sphere_geom, self.gym, self.viewer, self.envs[i], sphere_pose) 
 
+    # # Prints Dof pos
+    # def _draw_debug_vis(self):
+    #     print()

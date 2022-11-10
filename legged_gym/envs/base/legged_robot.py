@@ -382,6 +382,8 @@ class LeggedRobot(BaseTask):
         Args:
             env_ids (List[int]): Environemnt ids
         """
+        
+        print(self.dof_names)
         self.dof_pos[env_ids] = self.default_dof_pos * torch_rand_float(0.90, 1.1, (len(env_ids), self.num_dof), device=self.device) # BIG DEAL MAXX
         self.dof_vel[env_ids] = 0.
 
